@@ -1,15 +1,32 @@
 /* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
 import React from 'react';
-import {
-    View,
-    Text,
-} from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RouteProp} from '@react-navigation/native';
+import {View, Text, Button} from 'react-native';
+import {RootStackParamList} from '../../navigation/RootParamList';
 
-const AccountScreen = () => {
+type AccountScreenProps = {
+  navigation: StackNavigationProp<RootStackParamList, 'AccountScreen'>;
+  route: RouteProp<RootStackParamList, 'AccountScreen'>;
+};
+
+const AccountScreen = ({
+  navigation,
+  route,
+}: AccountScreenProps): React.JSX.Element => {
+  const {userID} = route.params;
+
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Account Screen</Text>
+      <Text>Account Screen {userID}</Text>
+      <Button
+        title="Go to Home Screen"
+        onPress={() => navigation.navigate('HomeScreen')}
+      />
+      <Button
+        title="Go to Product Screen"
+        onPress={() => navigation.navigate('ProductScreen')}
+      />
     </View>
   );
 };
