@@ -42,6 +42,10 @@ const HomeScreen = ({
         title="Go to Product Screen"
         onPress={() => navigation.navigate('ProductScreen')}
       />
+      <Button
+        title="Go to Cart Screen"
+        onPress={() => navigation.navigate('CartScreen')}
+      />
       <View>
         <Button title="Thêm user mới" onPress={addNewUser} />
 

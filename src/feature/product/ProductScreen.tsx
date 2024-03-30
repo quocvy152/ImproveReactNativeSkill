@@ -38,7 +38,6 @@ const InfoProductComponent = ({
   name: String;
   actionFetch: Function;
 }): React.JSX.Element => {
-  console.log('🚀 ~ InfoProductComponent:', 'InfoProductComponent');
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Info Product Component {name}</Text>

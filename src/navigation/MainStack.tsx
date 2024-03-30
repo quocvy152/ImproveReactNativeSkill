@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../feature/home/HomeScreen';
 import AccountScreen from '../feature/account/AccountScreen';
 import ProductScreen from '../feature/product/ProductScreen';
+import CartScreen from '../feature/cart/CartScreen';
 import {RootStackParamList} from './RootParamList';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -26,6 +27,11 @@ const MainStack = () => {
         name="ProductScreen"
         component={ProductScreen}
         options={{title: 'Sản phẩm'}}
+      />
+      <Stack.Screen
+        name="CartScreen"
+        component={CartScreen}
+        options={{title: 'Recoil Demo'}}
       />
     </Stack.Navigator>
   );
