@@ -6,6 +6,8 @@ import HomeScreen from '../feature/home/HomeScreen';
 import AccountScreen from '../feature/account/AccountScreen';
 import ProductScreen from '../feature/product/ProductScreen';
 import CartScreen from '../feature/cart/CartScreen';
+import HookDemoScreen from '../feature/hooks/HookDemoScreen';
+import UseReducerDemoScreen from '../feature/hooks/UseReducerDemoScreen';
 import {RootStackParamList} from './RootParamList';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -32,6 +34,16 @@ const MainStack = () => {
         name="CartScreen"
         component={CartScreen}
         options={{title: 'Recoil Demo'}}
+      />
+      <Stack.Screen
+        name="HookDemoScreen"
+        component={HookDemoScreen}
+        options={{title: 'Hook Demo Screen'}}
+      />
+      <Stack.Screen
+        name="UseReducerDemoScreen"
+        component={UseReducerDemoScreen}
+        options={{title: 'Hook Demo Screen'}}
       />
     </Stack.Navigator>
   );
