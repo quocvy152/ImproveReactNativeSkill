@@ -54,6 +54,10 @@ const HomeScreen = ({
         title="Go to Use Reducer Hook Demo Screen"
         onPress={() => navigation.navigate('UseReducerDemoScreen')}
       />
+      <Button
+        title="Go to Use Memo Hook Demo Screen"
+        onPress={() => navigation.navigate('UseMemoDemoScreen')}
+      />
       <View>
         <Button title="Thêm user mới" onPress={addNewUser} />
 

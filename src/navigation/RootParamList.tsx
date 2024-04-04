@@ -5,4 +5,5 @@ export type RootStackParamList = {
   CartScreen: undefined;
   HookDemoScreen: undefined;
   UseReducerDemoScreen: undefined;
+  UseMemoDemoScreen: undefined;
 };

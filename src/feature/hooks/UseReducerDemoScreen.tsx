@@ -95,11 +95,15 @@ const UseReducerDemoScreen = ({}): React.JSX.Element => {
       <Button title="DESCREASE" onPress={() => dispatchCount('DESCREASE')} />
       <Button title="RESET" onPress={() => dispatchCount('RESET')} />
 
-      {dataUser?.isLoading ? <Text>Loading...</Text> : dataUser?.data?.map((user: any) => (
-        <Text>
-          {user?.first_name} {user?.last_name}
-        </Text>
-      ))}
+      {dataUser?.isLoading ? (
+        <Text>Loading...</Text>
+      ) : (
+        dataUser?.data?.map((user: any) => (
+          <Text>
+            {user?.first_name} {user?.last_name}
+          </Text>
+        ))
+      )}
       <Button title="GET USERS" onPress={() => fetchDataUsers()} />
     </View>
   );

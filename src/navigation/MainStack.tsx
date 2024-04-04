@@ -8,6 +8,7 @@ import ProductScreen from '../feature/product/ProductScreen';
 import CartScreen from '../feature/cart/CartScreen';
 import HookDemoScreen from '../feature/hooks/HookDemoScreen';
 import UseReducerDemoScreen from '../feature/hooks/UseReducerDemoScreen';
+import UseMemoDemoScreen from '../feature/hooks/UseMemoDemoScreen';
 import {RootStackParamList} from './RootParamList';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -44,6 +45,11 @@ const MainStack = () => {
         name="UseReducerDemoScreen"
         component={UseReducerDemoScreen}
         options={{title: 'Hook Demo Screen'}}
+      />
+      <Stack.Screen
+        name="UseMemoDemoScreen"
+        component={UseMemoDemoScreen}
+        options={{title: 'Hook UseMemo Demo Screen'}}
       />
     </Stack.Navigator>
   );
