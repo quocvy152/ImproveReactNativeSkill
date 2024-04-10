@@ -10,6 +10,7 @@ import HookDemoScreen from '../feature/hooks/HookDemoScreen';
 import UseReducerDemoScreen from '../feature/hooks/UseReducerDemoScreen';
 import UseMemoDemoScreen from '../feature/hooks/UseMemoDemoScreen';
 import AnimatedScreen from '../feature/animations/AnimatedScreen';
+import MomoHeader from '../feature/momo/MomoHeader';
 import {RootStackParamList} from './RootParamList';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -56,6 +57,11 @@ const MainStack = () => {
         name="AnimatedScreen"
         component={AnimatedScreen}
         options={{title: 'Animated Demo Screen'}}
+      />
+      <Stack.Screen
+        name="MomoHeader"
+        component={MomoHeader}
+        options={{title: 'Momo Header Screen', headerShown: false}}
       />
     </Stack.Navigator>
   );

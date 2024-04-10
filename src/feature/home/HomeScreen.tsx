@@ -62,6 +62,10 @@ const HomeScreen = ({
         title="Go to Animated Demo Screen"
         onPress={() => navigation.navigate('AnimatedScreen')}
       />
+      <Button
+        title="Go to Momo Header Screen"
+        onPress={() => navigation.navigate('MomoHeader')}
+      />
       <View>
         <Button title="Thêm user mới" onPress={addNewUser} />
 

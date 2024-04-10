@@ -7,4 +7,5 @@ export type RootStackParamList = {
   UseReducerDemoScreen: undefined;
   UseMemoDemoScreen: undefined;
   AnimatedScreen: undefined;
+  MomoHeader: undefined;
 };
