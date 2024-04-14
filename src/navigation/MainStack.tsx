@@ -11,6 +11,7 @@ import UseReducerDemoScreen from '../feature/hooks/UseReducerDemoScreen';
 import UseMemoDemoScreen from '../feature/hooks/UseMemoDemoScreen';
 import AnimatedScreen from '../feature/animations/AnimatedScreen';
 import MomoHeader from '../feature/momo/MomoHeader';
+import RenderPropExample from '../feature/design_pattern/RenderPropExample';
 import {RootStackParamList} from './RootParamList';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -62,6 +63,11 @@ const MainStack = () => {
         name="MomoHeader"
         component={MomoHeader}
         options={{title: 'Momo Header Screen', headerShown: false}}
+      />
+      <Stack.Screen
+        name="RenderPropExample"
+        component={RenderPropExample}
+        options={{title: 'Render Prop'}}
       />
     </Stack.Navigator>
   );

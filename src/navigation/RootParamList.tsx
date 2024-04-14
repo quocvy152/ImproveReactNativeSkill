@@ -8,4 +8,6 @@ export type RootStackParamList = {
   UseMemoDemoScreen: undefined;
   AnimatedScreen: undefined;
   MomoHeader: undefined;
+  LoginScreen: undefined;
+  RenderPropExample: undefined;
 };

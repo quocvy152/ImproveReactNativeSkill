@@ -1,6 +1,7 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text, Button, StyleSheet} from 'react-native';
+import {View, Text, Button, StyleSheet, ScrollView} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../../navigation/RootParamList';
 import {useDispatch, useSelector} from 'react-redux';
@@ -33,51 +34,61 @@ const HomeScreen = ({
 
   return (
     <View style={styles.wrapHomeScreen}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Account Screen"
-        onPress={() => navigation.navigate('AccountScreen', {userID: '123456'})}
-      />
-      <Button
-        title="Go to Product Screen"
-        onPress={() => navigation.navigate('ProductScreen')}
-      />
-      <Button
-        title="Go to Cart Screen"
-        onPress={() => navigation.navigate('CartScreen')}
-      />
-      <Button
-        title="Go to Hook Demo Screen"
-        onPress={() => navigation.navigate('HookDemoScreen')}
-      />
-      <Button
-        title="Go to Use Reducer Hook Demo Screen"
-        onPress={() => navigation.navigate('UseReducerDemoScreen')}
-      />
-      <Button
-        title="Go to Use Memo Hook Demo Screen"
-        onPress={() => navigation.navigate('UseMemoDemoScreen')}
-      />
-      <Button
-        title="Go to Animated Demo Screen"
-        onPress={() => navigation.navigate('AnimatedScreen')}
-      />
-      <Button
-        title="Go to Momo Header Screen"
-        onPress={() => navigation.navigate('MomoHeader')}
-      />
-      <View>
-        <Button title="Thêm user mới" onPress={addNewUser} />
+      <ScrollView
+        contentContainerStyle={{
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Button
+          title="Go to Account Screen"
+          onPress={() => navigation.navigate('AccountScreen', {userID: '123456'})}
+        />
+        <Button
+          title="Go to Product Screen"
+          onPress={() => navigation.navigate('ProductScreen')}
+        />
+        <Button
+          title="Go to Cart Screen"
+          onPress={() => navigation.navigate('CartScreen')}
+        />
+        <Button
+          title="Go to Hook Demo Screen"
+          onPress={() => navigation.navigate('HookDemoScreen')}
+        />
+        <Button
+          title="Go to Use Reducer Hook Demo Screen"
+          onPress={() => navigation.navigate('UseReducerDemoScreen')}
+        />
+        <Button
+          title="Go to Use Memo Hook Demo Screen"
+          onPress={() => navigation.navigate('UseMemoDemoScreen')}
+        />
+        <Button
+          title="Go to Animated Demo Screen"
+          onPress={() => navigation.navigate('AnimatedScreen')}
+        />
+        <Button
+          title="Go to Momo Header Screen"
+          onPress={() => navigation.navigate('MomoHeader')}
+        />
+        <Button
+          title="Go to Render Prop Example"
+          onPress={() => navigation.navigate('RenderPropExample')}
+        />
+        <View>
+          <Button title="Thêm user mới" onPress={addNewUser} />
 
-        {listUser?.map((user: any) => (
-          <View style={styles.wrapInfoUser}>
-            <Text>Tên: {user.fullname}</Text>
-            <Text style={{marginLeft: 10}}>Tuổi: {user.age}</Text>
-          </View>
-        ))}
+          {listUser?.map((user: any) => (
+            <View style={styles.wrapInfoUser}>
+              <Text>Tên: {user.fullname}</Text>
+              <Text style={{marginLeft: 10}}>Tuổi: {user.age}</Text>
+            </View>
+          ))}
 
-        {listUser?.length === 0 && <Text>Hiện tại không có user nào</Text>}
-      </View>
+          {listUser?.length === 0 && <Text>Hiện tại không có user nào</Text>}
+        </View>
+      </ScrollView>
     </View>
   );
 };
